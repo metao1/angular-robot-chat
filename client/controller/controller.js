@@ -20,19 +20,19 @@ angularModule.directive('scrollBottom', function () {
         },
         link: function (scope, element) {
             scope.$watchCollection('scrollBottom', function (newValue) {
-                if (newValue) {
-                    var scrollHeight = $(element).prop('scrollHeight');
-                    $(element).animate({scrollTop: scrollHeight}, 500);
-                }
+var scrollHeight = $(element).prop('scrollHeight');
+
+$(element).animate({scrollTop: scrollHeight}, 500);
             });
         }
     }
+ 
 });
 
 angularModule.factory("VoteService", function ($http) {
     return {
         talk: function (query) {
-            return $http.post('/talk',{q:query});
+            return $http.post('https://robotchat.herokuapp.com/talk',{q:query});
         }
     };
 });

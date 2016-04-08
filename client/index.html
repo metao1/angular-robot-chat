@@ -1,0 +1,46 @@
+<html ng-app="VoterApp" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Chat with robot</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="text/javascript"
+            src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+    <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript"
+            src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script>
+    <script type="application/javascript" src="./controller/controller.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+    <style>
+        html, body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<section class="module" ng-controller="VoterController">
+
+    <header class="top-bar">
+
+        <div class="left">
+            <span class="icon typicons-message"></span>
+            <h1>Hangouts</h1>
+        </div>
+
+        <div class="right">
+            <span class="icon typicons-minus"></span>
+            <span class="icon typicons-times"></span>
+        </div>
+
+    </header>
+
+    <ol class="discussion" scroll-bottom="message">
+        <div ng-bind-html="message"> </div>
+    </ol>
+
+    <footer>
+            <input type="text" placeholder="Type something to send..." ng-model="inputMessage" ng-enter="enter()"/>
+    </footer>
+</section>
+</body>
+</html>  

@@ -1,11 +1,10 @@
 <html ng-app="VoterApp" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Chat with robot</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <script  src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  
     <script type="text/javascript"
             src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  
     <script type="text/javascript"
             src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script>
     <script type="application/javascript" src="./controller/controller.js"></script>
@@ -25,7 +24,7 @@
 
         <div class="left">
             <span class="icon typicons-message"></span>
-            <h1>Hangouts</h1>
+            <h1>Chat with robot</h1>
         </div>
 
         <div class="right">
@@ -35,8 +34,8 @@
 
     </header>
 
-    <ol class="discussion">
-        <div ng-bind-html="message" scroll-bottom="message"> </div>
+    <ol class="discussion" scroll-bottom="message">
+        <div ng-bind-html="message"> </div>
     </ol>
 
     <footer>

@@ -3,7 +3,6 @@ var bodyParser = require('body-parser');
 var express = require('express');
 var logger = require('morgan');
 var request = require('request');
-var compression = require('compression');
 
 var app = express();
 

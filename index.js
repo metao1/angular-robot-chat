@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 
 var server = require('http').Server(app);
-var port = process.argv[2] || 8080;
+var port = process.argv[2] || 5000;
 server.listen(port);
 
 var headers ={

@@ -16,8 +16,11 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 
 var server = require('http').Server(app);
-var port = process.argv[2] || 5000;
-server.listen(port);
+app.set('port', (process.env.PORT || 5000));
+
+server.listen(app.get('port'), function () {
+    console.log('App is running on port', app.get('port'));
+});
 
 var headers ={
   "Access-Control-Allow-Origin" :"*"

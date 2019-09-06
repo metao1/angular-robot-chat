@@ -59,7 +59,7 @@ angularModule.controller("VoterController", function ($scope, $sce, VoteService)
     $scope.enter = function(){
         $scope.message+=$sce.trustAsHtml("<li class=\"self\"> "+
             "<div class=\"avatar\"> "+
-            "<img src=\"/image/avatar.png\" /> "+
+            "<img src=\"../image/avatar.png\" /> "+
             "</div> "+
             " <div class=\"messages\"> "+
             "<p>"+ $scope.inputMessage+"</p> "+

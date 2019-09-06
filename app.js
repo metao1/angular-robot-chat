@@ -3,7 +3,7 @@ var path = require('path');
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, 'view')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.listen(8000, '0.0.0.0', function() {});
 

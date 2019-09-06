@@ -32,7 +32,8 @@
     "webdriverio": "^4.8.0"
   },
   "dependencies": { 
-    "async": "^2.5.0",
+    "async": "^2.5.0", 
+    "compression": "1.7.4",				
     "bluebird": "^3.5.1",
     "body-parser": "~1.17.1",
     "chai-as-promised": "^7.1.1",

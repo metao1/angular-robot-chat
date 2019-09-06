@@ -4,7 +4,8 @@
   "description": "A robot made with angular",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "prestart": "npm install",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +22,23 @@
   ],
   "author": "Mehrdad Allahkarami",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "mocha-jsdom": "^1.1.0",
+    "mocha-multi": "^0.11.0",
+    "webdriverio": "^4.8.0"
+  },
+  "dependencies": { 
+    "async": "^2.5.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "~1.17.1",
+    "chai-as-promised": "^7.1.1",
+    "chromedriver": "^2.33.2",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
     "body-parser": "^1.12.4",
     "express": "^4.12.4",
     "morgan": "^1.5.3",

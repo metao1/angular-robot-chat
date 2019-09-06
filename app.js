@@ -4,20 +4,12 @@ var express = require('express');
 var logger = require('morgan');
 var request = require('request');
 
- var app = express();
+var app = express();
 
+app.use(express.static(path.join(__dirname, '../client')));
 
-app.set('port', process.env.PORT ||5000);
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
- app.use(express.static(path.join(__dirname, '../client')));
-
-
- var server = require('http').Server(app);
 var port = process.env.PORT || 5000;
-server.listen(port);
+app.listen(port);
 
  var headers ={
   "Access-Control-Allow-Origin" :"*"
